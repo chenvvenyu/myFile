@@ -1,0 +1,1 @@
+getBoundingClientRect	判断当前元素与窗口的距离

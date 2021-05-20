@@ -1,0 +1,34 @@
+命名的路由
+router.push({ name: 'user', params: { userId: '123' }})
+带查询参数，变成 /register?plan=private
+router.push({ path: 'register', query: { plan: 'private' }})
+**如果提供了path,params则会被忽略
+
+.push		跳转至
+.replace		跳转至(不向history添加记录，而是替换当前history记录)
+.go		在当前history记录中 向前或前后多少步
+
+前置守卫(router/inde.js)
+	router.beforeEach((to.from,next))=>{}
+	to:即将进入的目标
+	from:当前要离开的目标
+	next:一定要调用该方法
+后置钩子
+	router.afterEach(to,from)=>{｝
+	
+
+标签
+<router-link>
+	to:内部会立即把to的值传给.push
+	replace:点击时调用.replace而不是.push
+	append:在当前路径加路径
+	tag:渲染成指定标签
+	active-class:激活css的类名
+	
+<router-view>
+	
+$router
+	.path
+	.parems
+	.query
+	.matched

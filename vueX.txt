@@ -1,0 +1,12 @@
+state		存放状态
+mutations 	state成员操作
+getters		加工state成员给外界
+actions 		异步操作
+modules		模块化状态管理
+
+辅助函数
+	mapState(computed中)
+	mapGetters(computed中)
+	mapMutations(methods中)
+	mapActions(methods中)
+	
