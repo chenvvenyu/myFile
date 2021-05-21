@@ -9,4 +9,8 @@ git remote
 .gitignore文件下可忽略文件不上传
 	[文件名]		忽略文件
 	[文件价名]/*	忽略整个文件夹
+
+git rm -r --cached .
+git add .
+git commot -m 'update .gitignore'
 	

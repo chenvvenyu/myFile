@@ -1,4 +1,14 @@
 启动页的需求
 	1.权限请求
 	2.判断进入(扫码，分享)处理
-	
+
+
+wx.canIUse("getUpdateManager") 判断微信版本是否支持"getUpdateManager"
+不行则提示版本微信过低
+实例化 updateManager wx.getUpdateManager()
+ updateManager.onCheckForUpdate()是否有新版本(回调可能失败)
+hasUpdate 为ture时执行
+ 成功:	updateManager.onUpdateReady()成功回调 
+	updateManager.applyUpdate()	    强制重启小程序更新
+ 失败：       updateManager.onUpdateFailed() 失败回调
+ 
