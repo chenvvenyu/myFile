@@ -13,4 +13,5 @@ git remote
 git rm -r --cached .
 git add .
 git commot -m 'update .gitignore'
-	
+
+git reset --soft	

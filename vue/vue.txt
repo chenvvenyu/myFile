@@ -1,0 +1,7 @@
+事件修饰符
+	.stop	阻止冒泡
+	.prevent	组织默认事件
+	.capture	冒泡事件的顺序
+	.self	
+	.once	只执行一次
+	.passive	

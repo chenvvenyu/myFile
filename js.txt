@@ -1,1 +1,46 @@
+DMO
+	获取DMO元素
+	getElementById
+	getElementsByTagName
+	getElementsByClassName
+
+	操作DMO元素
+	createElement
+	removeChild
+	appendChild
+	replaceChild
+	write
+
+BOM对象
+	Window
+		innerHeight
+		innerWidth
+		open
+		close
+		moveTo
+		resizeTo
+	Scrren	屏幕对象
+		window.screen.width  屏幕宽度
+		window.screen.height  屏幕高度
+		window.screen.colorDepth  屏幕颜色深度
+		window.screen.availWidth 可用宽度(除去任务栏的高度)
+		window.screen.availHeight 可用高度(除去任务栏的高度)
+	Location
+	History
+		window.history.length 浏览过的页面数
+		history.back() 在浏览历史里后退一步
+		history.forward() 在浏览历史里前进一步
+		history.go(i) 到汗青详细登记单的第i位
+	Navigator
+	Timing
+		setTimeout
+		setInterval
+	Cookies
+	弹出框
+		alert
+		prompt
+		confirm
+
 getBoundingClientRect	判断当前元素与窗口的距离
+
+XMLHttpRequest
