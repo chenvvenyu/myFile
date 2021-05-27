@@ -1,0 +1,9 @@
+#server:
+#  port: 8081
+#[name]: value :与value间一定要有空格
+person:
+  name: 张三
+  age: 20
+  dog:
+    name: 小猫
+    age: 2

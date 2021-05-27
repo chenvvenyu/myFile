@@ -1,0 +1,4 @@
+映射配置文件中的值(application.yml)
+	1.@ConfiguratioinProperties(prefix = 'name')全局配置文件获取
+	2.@Value('')
+	3.@PropertySource(value = {"classpath:[文件名.文件]"}) 获取指定文件的值
