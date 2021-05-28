@@ -1,4 +1,59 @@
-映射配置文件中的值(application.yml)
+映射配置文件中的值(application.yml)到类中
 	1.@ConfiguratioinProperties(prefix = 'name')全局配置文件获取
 	2.@Value('')
 	3.@PropertySource(value = {"classpath:[文件名.文件]"}) 获取指定文件的值
+
+Spring Boot项目中没用Spring 的配置文件，我们编写的配置文件不能自动识别
+想让配置生效；@imporResource
+
+
+//配置文件配置多环境
+server:
+	port:8081
+spring:
+	profiles:
+	active:dev
+---
+server:
+	port:803
+spring:
+	profiles:dev
+
+打包后
+命令行: java-jar [项目名].jar --spring.profiles.active=[选择的profiles]
+
+
+组件:
+
+@Configuration 声明是spring的配置类
+
+组件的注册：
+1.包扫描+组件注解(@Controller/@Service/@Repository/@Component)
+	@ComponentScan 扫描路径
+2.@Import快速导入
+	@Import:容器就会自动注册组件
+	ImportSelector:返回需要导入的组件的全类名
+	ImpotBeanDefinitionRegistrar:手动注册bean到容器中
+3.@Bean 给容器添加组件 (默认是单例)ioc容器启动后会调用方法创建
+对象放到ioc容器中，每次获取就从ioc容器中拿(map.get())
+
+	多例模式：ioc容器启动后不会创建对象放入容器中，
+		而是在获取时创建对象
+	模式选择：1.@Scope 设置组件 2.在xml中配置
+
+	@Lazy:单例模式的懒加载，ioc容器启动时不创建对象,
+	而是在第一次获取时创建对象
+	@Conditional 条件注册组件
+
+bean的生命周期:创建--初始化--销毁过程
+	1.指定初始化和销毁方法 init-method,destroy-method
+		在多例模式下不会触发销毁方法
+	2.通过Bean实现InitizlizingBean,DisposableBean
+	3.可以使用JSP250;
+		@PostConstruct:bean创建并赋值，执行该方法
+		@PreDestroy:在bean销毁前，执行该方法
+
+自动装配
+	1.@Autowired:自动注入IOC
+		@Quailfier,@Primary
+	2.@Resource(JSR250),@Inject(JST330)

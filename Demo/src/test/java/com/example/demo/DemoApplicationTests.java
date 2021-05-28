@@ -21,9 +21,11 @@ class DemoApplicationTests {
        boolean b = ioc.containsBean("hellowService");
        System.out.println(b);
     }
+//
+//    @Test
+//    void getData(){
+//       System.out.println(person);
+//    }
 
-    @Test
-    void getData(){
-       System.out.println(person);
-    }
+
 }
