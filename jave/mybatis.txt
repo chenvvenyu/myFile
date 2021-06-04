@@ -1,0 +1,21 @@
+@MapperScan() 在启动类使用 扫描所有Mapper类
+
+实体类		要与数据库一致
+
+接口
+
+实现类		创建mapper对象 
+
+@Mapper		申明Mapper
+
+xml 		操作数据库 且id 与mapper类中对应(映射) resultType 返回类型
+
+mybatis配置中可以配置多个环境
+	<environments default="选择环境的id">
+		<environment id="名称">
+			...
+		</environment>
+		<environment id="">
+			...
+		</environment>
+	</environments>

@@ -6,6 +6,8 @@
 Spring Boot项目中没用Spring 的配置文件，我们编写的配置文件不能自动识别
 想让配置生效；@imporResource
 
+@ResponseBody 进行响应
+@RestController =@Controller + @ResponseBody 
 
 //配置文件配置多环境
 server:
@@ -26,6 +28,7 @@ spring:
 组件:
 
 @Configuration 声明是spring的配置类
+	1.proxyBeanMethods:代理bean方法(是否有依赖)
 
 组件的注册：
 1.包扫描+组件注解(@Controller/@Service/@Repository/@Component)
@@ -57,3 +60,30 @@ bean的生命周期:创建--初始化--销毁过程
 	1.@Autowired:自动注入IOC
 		@Quailfier,@Primary
 	2.@Resource(JSR250),@Inject(JST330)
+
+AOP
+	1.导入aop模块:Spring Aop(spring-aspects)
+	2.定义一个业务逻辑类：
+	3.定义一个切面类 @Aspect
+		抽取共同切点@Pointcut
+		前置通知@Before
+		后置通知@After
+		返回通知@AfterReturning
+		异常通知@AfterThrowing
+		环绕通知@Around
+	4.将切面类和业务逻辑类都加入容器中
+	5.给配置类中加@EnableAspectJAuttoProxy(开启基于注解的aop模式)
+
+声明式实物
+	1.导入相关依赖:数据源,数据驱动,Spring-jdbc
+	2.配置数据源:JdbcTemplate(Spring提供的简化数据库操作的工具)
+	3.给方法标注@Transactional 表示当前是个事务方法
+	4.@EnableTransactionManagement 开启基于注解的事务管理功能
+	5.配置事务管理器来控制事务
+
+servlet
+
+properties
+	server
+		port
+		servlet.context-path

@@ -1,0 +1,13 @@
+依赖
+	springcloud Hoxton.RS6
+	springboot
+	jdk1.8
+	maven 3.x
+
+1.服务注册中心组件
+	就是在整个微服务架构中单独抽取一个服务，这个服务不完成项目中的
+	任务业务功能，仅仅用来在微服务中记录微服务以及对整个系统微服务
+	进行健康检查，以及服务元数据信息储存
+
+2.服务注册中心组件开发
+	常用中心组件:eureka(netflix),zooleeker(java),consul(go),nacos(java阿里巴巴)
